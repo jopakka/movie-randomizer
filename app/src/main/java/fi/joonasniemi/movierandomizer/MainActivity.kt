@@ -10,7 +10,7 @@ import androidx.compose.material.Text
 import androidx.compose.runtime.Composable
 import androidx.compose.ui.Modifier
 import androidx.compose.ui.tooling.preview.Preview
-import fi.joonasniemi.movierandomizer.components.MovieItem
+import fi.joonasniemi.movierandomizer.ui.movie.MovieScreen
 import fi.joonasniemi.movierandomizer.ui.theme.MovieRandomizerTheme
 
 class MainActivity : ComponentActivity() {
@@ -23,22 +23,9 @@ class MainActivity : ComponentActivity() {
                     modifier = Modifier.fillMaxSize(),
                     color = MaterialTheme.colors.background
                 ) {
-                    Greeting("Android")
+                    MovieScreen()
                 }
             }
         }
-    }
-}
-
-@Composable
-fun Greeting(name: String) {
-    Text(text = "Hello $name!")
-}
-
-@Preview(showBackground = true)
-@Composable
-fun DefaultPreview() {
-    MovieRandomizerTheme {
-        Greeting("Android")
     }
 }
